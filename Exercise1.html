@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1</title>
+	</head>
+	
+	<style>
+		h1
+		{
+			font-size: 25px;
+			font-family: veranda;
+			text-align: center;
+		}
+		
+		p
+		{
+			font-size: 20px;
+			font-family: helvetica;
+			text-align: center;
+		}
+	</style>
+	
+	<body>
+		<h1>1. All odd numbers are sorted in ascending order.</h1>
+		<h1>2. All even numbers and zeros stay in their orginal place.</h1>
+		<h1>3. If the array is empty, then an empty array is returned.</h1>
+		
+		<p>
+			Result of a sorted array:
+			<p id = "sortedArray"></p>
+		</p>
+		
+		<script>
+			function sortArray(array)
+			{
+				//create new array with elements from existing array
+				var oddArray = array.filter(function (ele) { return (ele % 2) !== 0; }).sort(function (a, b) { return a - b; });
+
+				//set variable for new array element
+				var j = 0;
+
+				//set variable for existing array element; define condition; increase value
+				for (var i = 0; i < array.length; i++)
+				{
+				if (array[i] % 2)
+					{
+						array[i] = oddArray[j];
+						j++;
+					}
+				}
+				return array;
+			}
+
+			//sortArray([5, 3, 2, 8, 1, 4]);
+			//sortArray([6, 3, 2, 7, 5, 0]);
+			sortArray([0, 2, 5, 8, 3, 1, 9, 3, 6, 1, 0, 7]);
+			//sortArray([]);
+
+			document.getElementById("sortedArray").innerHTML = sortArray([6, 3, 2, 7, 5, 0]);
+		</script>
+	</body>
+</html>
