@@ -29,5 +29,5 @@ function sortArray(array)
 
 //sortArray([5, 3, 2, 8, 1, 4]);
 //sortArray([6, 3, 2, 7, 5, 0]);
-sortArray([0, 5, 8, 3, 1, 6, 9, 3, 0, 7]);
+sortArray([0, 2, 5, 8, 3, 1, 6, 9, 3, 1, 0, 7]);
 //sortArray([]);
