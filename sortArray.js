@@ -9,22 +9,22 @@
 
 function sortArray(array)
 {
-//create new array with elements from existing array
-var oddArray = array.filter(function (ele) { return (ele % 2) !== 0; }).sort(function (a, b) { return a - b; });
+  //create new array with elements from existing array
+  var oddArray = array.filter(function (ele) { return (ele % 2) !== 0; }).sort(function (a, b) { return a - b; });
 
-//set variable for new array element
-var j = 0;
+  //set variable for new array element
+  var j = 0;
 
-//set variable for existing array element; define condition; increase value
-for (var i = 0; i < array.length; i++)
-{
-if (array[i] % 2)
-{
-array[i] = oddArray[j];
-j++;
-}
-}
-return array;
+  //set variable for existing array element; define condition; increase value
+  for (var i = 0; i < array.length; i++)
+  {
+    if (array[i] % 2)
+    {
+      array[i] = oddArray[j];
+      j++;
+    }
+  }
+  return array;
 }
 
 //sortArray([5, 3, 2, 8, 1, 4]);
