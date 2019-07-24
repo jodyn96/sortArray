@@ -7,11 +7,6 @@
 //[5, 3, 2, 8, 1, 4] should return [1, 3, 2, 8, 5, 4]
 //[6, 3, 2, 7, 5, 0] should return [6, 3, 2, 5, 7, 0]
 
-//sortArray([5, 3, 2, 8, 1, 4]);
-//sortArray([6, 3, 2, 7, 5, 0]);
-sortArray([0, 5, 8, 3, 1, 6, 9, 3, 0, 7]);
-//sortArray([])
-
 function sortArray(array)
 {
   //create new array with elements from existing array
@@ -31,3 +26,8 @@ function sortArray(array)
   }
   return array;
 }
+
+//sortArray([5, 3, 2, 8, 1, 4]);
+//sortArray([6, 3, 2, 7, 5, 0]);
+sortArray([0, 5, 8, 3, 1, 6, 9, 3, 0, 7]);
+//sortArray([]);
