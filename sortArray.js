@@ -7,27 +7,29 @@
 //[5, 3, 2, 8, 1, 4] should return [1, 3, 2, 8, 5, 4]
 //[6, 3, 2, 7, 5, 0] should return [6, 3, 2, 5, 7, 0]
 
-function sortArray(array)
-{
-  //create new array with elements from existing array
-  var oddArray = array.filter(function (ele) { return (ele % 2) !== 0; }).sort(function (a, b) { return a - b; });
+function getMiddleChar(string)
+			{
+				//create new variable
+				var middleLetters = '';
 
-  //set variable for new array element
-  var j = 0;
+				//find string length if even or odd
+				if (string.length % 2 === 0)
+				{
+				var even = string.length / 2;
+				return string.slice(even - 1, even + 1);
+				}
 
-  //set variable for existing array element; define condition; increase value
-  for (var i = 0; i < array.length; i++)
-  {
-    if (array[i] % 2)
-    {
-      array[i] = oddArray[j];
-      j++;
-    }
-  }
-  return array;
-}
+				if (string.length % 2 !== 0)
+				{
+				var odd = string.charAt((string.length / 2))
+				return odd;
+				}
+			}
 
-//sortArray([5, 3, 2, 8, 1, 4]);
-//sortArray([6, 3, 2, 7, 5, 0]);
-sortArray([0, 2, 5, 8, 3, 1, 6, 9, 3, 1, 0, 7]);
-//sortArray([]);
+			//getMiddleChar("dog");
+			//getMiddleChar("Fishing");
+			//getMiddleChar("have");
+			//getMiddleChar("Middle");
+			//getMiddleChar("C");
+			getMiddleChar("Davenport");
+			//getMiddleChar(" ");
